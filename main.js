@@ -37,7 +37,7 @@ const generate = async(prompt) => {
 
 
 
-app.get('/api/content', async(req, res)=>{
+app.post('/api/content', async(req, res)=>{
     try{
         const data = req.body.question;
         const result = await generate(data);
