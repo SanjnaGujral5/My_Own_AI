@@ -7,7 +7,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:5500', 'http://127.0.0.1:5501'],  // Allow requests from this frontend origin
+    origin: [ 'http://localhost:5500', 
+        'http://127.0.0.1:5501', 
+        'https://askgeminifrontend.onrender.com'],  // Allow requests from this frontend origin
     methods: ['GET', 'POST'],        // Allow specific HTTP methods
 }));
 app.use(express.json());
